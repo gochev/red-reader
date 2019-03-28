@@ -1,0 +1,11 @@
+.list-view .scroll-bar:vertical {
+    -fx-scale-x: 0;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #e34F43;
+}
+
+.list-cell {
+    -fx-background-color:#C1354F
+}

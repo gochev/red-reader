@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainViewController">
+   <children>
+      <AnchorPane fx:id="menu" prefHeight="700.0" prefWidth="185.0" style="-fx-background-color: #BA2E49;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #e34F43;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btnLogin" alignment="BASELINE_LEFT" graphicTextGap="8.0" prefHeight="50.0" prefWidth="200.0" text="LOGIN" textFill="WHITE">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <graphic>
+                        <MaterialIconView fill="WHITE" glyphName="PERM_IDENTITY" size="16" />
+                     </graphic>
+                     <padding>
+                        <Insets left="55.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <JFXButton fx:id="btnHome" alignment="BASELINE_LEFT" graphicTextGap="8.0" layoutX="24.0" layoutY="111.0" prefHeight="39.0" prefWidth="153.0" text="HOME" textFill="WHITE">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <graphic>
+                  <MaterialIconView fill="WHITE" glyphName="HOME" size="16.0" />
+               </graphic>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="btnPopular" alignment="BASELINE_LEFT" graphicTextGap="8.0" layoutX="24.0" layoutY="163.0" prefHeight="39.0" prefWidth="153.0" text="POPULAR" textFill="WHITE">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <graphic>
+                  <MaterialIconView fill="WHITE" glyphName="LIGHTBULB_OUTLINE" size="16" />
+               </graphic>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+            </JFXButton>
+            <MaterialIconView fx:id="labelRefresh" fill="WHITE" glyphName="REFRESH" layoutX="15.0" layoutY="686.0" size="18" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" />
+            <JFXListView fx:id="listSubreddits" layoutX="9.0" layoutY="202.0" prefHeight="427.0" prefWidth="167.0" style="-fx-background-color: #BA2E49;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="list" layoutX="185.0" prefHeight="700.0" prefWidth="260.0" style="-fx-background-color: #c0324C;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="50.0" prefWidth="274.0" style="-fx-background-color: #BA2E49;" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="32.0" layoutY="18.0" text="VIEW:" textFill="WHITE">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <MaterialIconView fx:id="labelInbox" fill="WHITE" glyphName="MARKUNREAD" layoutX="101.0" layoutY="34.0" size="18.0" />
+                  <MaterialIconView fx:id="labelUnread" fill="WHITE" glyphName="REMOVE_CIRCLE" layoutX="163.0" layoutY="34.0" size="18.0" />
+                  <MaterialIconView fx:id="labelAll" fill="WHITE" glyphName="SWAP_VERTICAL_CIRCLE" layoutX="133.0" layoutY="34.0" size="18" />
+               </children>
+            </Pane>
+            <JFXListView fx:id="listArticles" layoutX="13.0" layoutY="62.0" prefHeight="576.0" prefWidth="238.0" style="-fx-background-color: #C1354F;" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="62.0"/>
+            <HBox layoutY="650.0" prefHeight="50.0" prefWidth="261.0" spacing="70.0" style="-fx-background-color: #BA2E49;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <MaterialIconView fx:id="labelMarkAllRead" fill="WHITE" glyphName="CHECK_CIRCLE" size="18" />
+                  <Label text="0 items" textFill="WHITE" />
+               </children>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="content" layoutX="450.0" prefHeight="700.0" prefWidth="854.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="854.0" spacing="40.0" style="-fx-background-color: #BA2E49;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <MaterialIconView fx:id="labelMarkUnread" fill="WHITE" glyphName="REMOVE_CIRCLE_OUTLINE" size="16" />
+                  <MaterialIconView fx:id="labelShare" fill="WHITE" glyphName="SHARE" size="18.0" />
+                  <MaterialIconView fx:id="labelComments" fill="WHITE" glyphName="COMMENT" size="16" />
+                  <MaterialIconView fx:id="labelFullView" accessibleHelp="full article" accessibleText="full article" fill="WHITE" glyphName="SCREEN_SHARE" size="18.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+            <Label fx:id="labelTitle" layoutX="115.0" layoutY="84.0" prefHeight="25.0" prefWidth="672.0" text="The Codiac" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="67.0" AnchorPane.topAnchor="84.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <WebView fx:id="webview" layoutX="14.0" layoutY="163.0" prefHeight="527.0" prefWidth="828.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="163.0" />
+            <Label fx:id="labelDate" layoutX="117.0" layoutY="65.0" text="Today 12.02.2018" textFill="#757575">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelAuthor" layoutX="116.0" layoutY="126.0" text="by Hakuhna mama" textFill="#757575">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
